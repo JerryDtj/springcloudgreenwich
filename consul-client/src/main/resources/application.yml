@@ -1,9 +1,15 @@
 server:
-  port: 10010
+  port: 10013
 spring:
   application:
-    name: consul-client
+    name: consul-client10013
   cloud:
     consul:
-      host: localhost
+      host: 10.3.0.83
       port: 8500
+      discovery:
+        health-check-url: http://10.3.0.83:10013/actuator/health
+    discovery:
+      client:
+        health-indicator:
+          enabled: false
