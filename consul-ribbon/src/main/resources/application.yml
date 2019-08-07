@@ -1,15 +1,15 @@
 server:
-  port: 10013
+  port: 10015
 spring:
   application:
-    name: consul-client10013
+    name: consul-consumer
   cloud:
     consul:
       host: 192.168.1.4
       port: 8500
       discovery:
-        health-check-url: http://192.168.1.4:10013/actuator/health
-        service-name: consul-client10013
+        health-check-url: http://192.168.1.4:10015/actuator/health
+        service-name: consul-consumer
     discovery:
       client:
         health-indicator:

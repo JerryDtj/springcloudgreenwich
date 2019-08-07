@@ -5,6 +5,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>consul-client</module>
+        <module>consul-consumer</module>
+        <module>consul-clientTwo</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

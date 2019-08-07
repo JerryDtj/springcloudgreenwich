@@ -1,4 +1,4 @@
-package com.learn.consul.contorller;
+package consul.contorller;
 
 import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +17,6 @@ public class DcController {
 
     @GetMapping("/dc")
     public String dc(){
-        return "client";
+        return "clientTwo";
     }
 }
