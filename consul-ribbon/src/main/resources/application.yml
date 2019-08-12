@@ -5,10 +5,10 @@ spring:
     name: consul-consumer
   cloud:
     consul:
-      host: 192.168.1.4
+      host: localhost
       port: 8500
       discovery:
-        health-check-url: http://192.168.1.4:10015/actuator/health
+        health-check-url: http://localhost:10015/actuator/health
         service-name: consul-consumer
     discovery:
       client:

@@ -1,15 +1,15 @@
 server:
-  port: 10014
+  port: 10020
 spring:
   application:
-    name: consul-client2
+    name: consul-feign
   cloud:
     consul:
       host: localhost
       port: 8500
       discovery:
-        health-check-url: http://localhost:10014/actuator/health
-        service-name: consul-client
+        health-check-url: http://localhost:10020/actuator/health
+        service-name: consul-feign
     discovery:
       client:
         health-indicator:
