@@ -8,6 +8,7 @@
         <module>consul-ribbon</module>
         <module>consul-clientTwo</module>
         <module>consul-consumer-feign</module>
+        <module>consul-client-jerry</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

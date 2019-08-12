@@ -14,10 +14,11 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
-        <dependency>
+<!--        因为不需要发布服务，所以检测模块暂时不要-->
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>

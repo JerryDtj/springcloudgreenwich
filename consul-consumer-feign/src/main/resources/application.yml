@@ -7,10 +7,10 @@ spring:
     consul:
       host: localhost
       port: 8500
-      discovery:
-        health-check-url: http://localhost:10020/actuator/health
-        service-name: consul-feign
-    discovery:
-      client:
-        health-indicator:
-          enabled: true
+#      discovery:
+#        health-check-url: http://localhost:10020/actuator/health
+#        service-name: consul-client
+#    discovery:
+#      client:
+#        health-indicator:
+#          enabled: true

@@ -1,5 +1,7 @@
 package com.learn.consulconsumerfeign.controller;
 
+import com.learn.consulconsumerfeign.service.DCService;
+import com.learn.consulconsumerfeign.service.JerryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,10 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DcConsumer {
     @Autowired
-    private DcConsumer dcConsumer;
+    private DCService dcService;
+
+    @Autowired
+    private JerryService jerryService;
 
     @GetMapping("/dc")
     public String dcConsumer(){
-        return dcConsumer.dcConsumer();
+        String dc = dcService.getDC();
+        String jerryDc = jerryService.getDc();
+        return String.format("return:%s,%s",dc,jerryDc);
     }
 }

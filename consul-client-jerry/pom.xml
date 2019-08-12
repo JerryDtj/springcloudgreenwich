@@ -9,7 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>consul-client</artifactId>
+    <groupId>com.learn</groupId>
+    <artifactId>consul-client-jerry</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
