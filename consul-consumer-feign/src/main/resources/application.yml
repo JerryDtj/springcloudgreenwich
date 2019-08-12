@@ -5,6 +5,7 @@ spring:
     name: consul-feign
   cloud:
     consul:
+#      consul服务端地址
       host: localhost
       port: 8500
 #      下面的配置主要是用于consul的心跳检测。如果不用发布服务，那么可以不配置
@@ -13,5 +14,6 @@ spring:
         service-name: consul-feign
     discovery:
       client:
+#        是否开启心跳检测
         health-indicator:
           enabled: true
