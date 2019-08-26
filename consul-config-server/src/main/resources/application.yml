@@ -1,18 +1,11 @@
+server:
+  port: 10030
 spring:
+  application:
+    name: consul-config-server
   cloud:
     config:
       server:
         git:
-          url: https://github.com/JerryDtj/springcloudgreenwich
-          #查找目录，如果server项目为单独一个项目，不为一个子模块，这个可以不要
+          uri: https://github.com/JerryDtj/springcloudgreenwich.git
           search-paths: config-repo
-    consul:
-      host: localhost
-      port: 8500
-      discovery:
-        health-check-url: http://localhost:10030/actuator/health
-        service-name: consul-config-server
-  application:
-    name: consul-config-server
-server:
-  port: 10030

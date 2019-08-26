@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: consul-config-server
+      profile: dev
