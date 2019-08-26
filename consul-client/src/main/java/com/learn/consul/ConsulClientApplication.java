@@ -5,6 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 /**
  * @author Jerry
@@ -16,4 +18,15 @@ public class ConsulClientApplication {
     public static void main(String[] args) {
         SpringApplication.run(ConsulClientApplication.class,args);
     }
+
+//    @Bean
+//    public static PropertySourcesPlaceholderConfigurer placeholderConfigurer() {
+//
+//        PropertySourcesPlaceholderConfigurer c = new PropertySourcesPlaceholderConfigurer();
+//
+//        c.setIgnoreUnresolvablePlaceholders(true);
+//
+//        return c;
+//
+//    }
 }
