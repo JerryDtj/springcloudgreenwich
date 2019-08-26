@@ -1,7 +1,13 @@
 spring:
+  application:
+    name: consul-client
   cloud:
     config:
       discovery:
         enabled: true
         service-id: consul-config-server
       profile: dev
+    consul:
+      host: localhost
+server:
+  port: 10013
