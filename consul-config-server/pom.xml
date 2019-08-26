@@ -9,24 +9,23 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>consul-client</artifactId>
+    <groupId>com.learn</groupId>
+    <artifactId>consul-config-server</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
-<!--        监控系统健康情况的工具-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-<!--        consul注册中心-->
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-        </dependency>
-        
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.58</version>
         </dependency>
     </dependencies>
 </project>
