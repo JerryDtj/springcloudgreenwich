@@ -23,4 +23,9 @@ public class DcController {
     public String dc(){
         return "client";
     }
+
+    @GetMapping("/userName")
+    public String getUserName(){
+        return userName+"***";
+    }
 }
