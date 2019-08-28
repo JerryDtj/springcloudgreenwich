@@ -1,0 +1,9 @@
+server:
+  port: 10040
+spring:
+  application:
+    name: consul-client-hystrix
+  cloud:
+    consul:
+      discovery:
+        service-name: hystrix-consume

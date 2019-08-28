@@ -10,6 +10,8 @@
         <module>consul-consumer-feign</module>
         <module>consul-client-jerry</module>
         <module>consul-config-server</module>
+        <module>consul-hystrix-consumer</module>
+        <module>consul-hystrix-client</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
