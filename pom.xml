@@ -12,6 +12,7 @@
         <module>consul-config-server</module>
         <module>consul-hystrix-consumer</module>
         <module>consul-hystrix-client</module>
+        <module>consul-hystrix-dashboard</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

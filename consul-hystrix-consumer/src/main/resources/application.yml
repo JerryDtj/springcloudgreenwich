@@ -2,7 +2,7 @@ server:
   port: 10040
 spring:
   application:
-    name: consul-client-hystrix
+    name: consul-consumer-hystrix
   cloud:
     consul:
       discovery:
