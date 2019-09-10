@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    consul:
+      #consul server端的地址和端口号
+      host: localhost
+      port: 8500
+    gateway:
+#      default-filters:
+      routes:
+        - id: consul-client
+          uri: http://localhost
+          order: 10013
+#          路由条件，Predicate 接受一个输入参数，返回一个布尔值结果。该接口包含多种默认方法来将 Predicate 组合成其他复杂的逻辑（比如：与，或，非）。
+          predicates:
+            - Path=/dc
