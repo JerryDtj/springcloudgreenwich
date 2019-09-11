@@ -1,4 +1,5 @@
 spring:
+  name: names
   cloud:
     consul:
       #consul server端的地址和端口号
