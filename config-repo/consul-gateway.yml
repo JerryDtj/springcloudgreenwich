@@ -4,6 +4,10 @@ spring:
       #consul server端的地址和端口号
       host: localhost
       port: 8500
+      #本服务的心跳地址以及注册到consul上的服务名称
+      discovery:
+        health-check-url: http://localhost:10040/actuator/health
+        service-name: consul-gateway
     gateway:
 #      default-filters:
       routes:
