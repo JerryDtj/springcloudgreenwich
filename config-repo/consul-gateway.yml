@@ -1,5 +1,5 @@
 spring:
-  name: name
+  name: names
   cloud:
     consul:
       #consul server端的地址和端口号
@@ -8,13 +8,12 @@ spring:
       #本服务的心跳地址以及注册到consul上的服务名称
       discovery:
         health-check-url: http://localhost:10040/actuator/health
-        service-name: consul-gateways
+        service-name: consul-gateway
     gateway:
 #      default-filters:
       routes:
         - id: consul-client
-          uri: http://localhost:10013
-          order: 10013
+          uri: http://www.baidu.com
 #          路由条件，Predicate 接受一个输入参数，返回一个布尔值结果。该接口包含多种默认方法来将 Predicate 组合成其他复杂的逻辑（比如：与，或，非）。
           predicates:
             - Path=/consul-client/**
