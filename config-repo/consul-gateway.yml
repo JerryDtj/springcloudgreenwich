@@ -12,10 +12,28 @@ spring:
     gateway:
 #      default-filters:
       routes:
+        # 集成consul注册中心的配置示例
+        # 系统路由
         - id: consul-client
+#          转发路径，lb代表从注册中心获取服务
           uri: lb://consul-client
 #          路由条件，Predicate 接受一个输入参数，返回一个布尔值结果。该接口包含多种默认方法来将 Predicate 组合成其他复杂的逻辑（比如：与，或，非）。
           predicates:
+#            注意这里和下面的等号后面一定要带空格，否则无法正常路由
             - Path= /consul-client/**
           filters:
             - StripPrefix= 1
+        # 路由到本机的9000端口上
+        - id: hello_route
+          uri: http://localhost:9000
+          predicates:
+            - Path=/producer/**
+          filters:
+            - StripPrefix=1
+        # 路由到百度页面
+        - id: baidu_route
+          uri: http://www.baidu.com
+          predicates:
+            - Path=/baidu/**
+          filters:
+            - StripPrefix=1
