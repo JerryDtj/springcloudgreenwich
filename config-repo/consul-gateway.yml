@@ -7,7 +7,7 @@ spring:
       #本服务的心跳地址以及注册到consul上的服务名称
       discovery:
         health-check-url: http://localhost:10040/actuator/health
-        service-name: consul-gateway
+        service-name: consul-gateways
     gateway:
 #      default-filters:
       routes:
