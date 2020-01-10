@@ -13,6 +13,9 @@
         <module>consul-hystrix-consumer</module>
         <module>consul-hystrix-client</module>
         <module>consul-hystrix-dashboard</module>
+        <module>consul-stream</module>
+        <module>trace-1</module>
+        <module>tracee-2</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
