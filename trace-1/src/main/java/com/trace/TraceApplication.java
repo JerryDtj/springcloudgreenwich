@@ -1,5 +1,6 @@
 package com.trace;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,11 +12,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * @author dengtianjiao
+ */
 @RestController
 @EnableDiscoveryClient
 @SpringBootApplication
+@Slf4j
 public class TraceApplication {
-    private final Logger logger = Logger.getLogger(getClass());
 
     @Bean
     @LoadBalanced
@@ -25,7 +29,7 @@ public class TraceApplication {
 
     @RequestMapping(value = "/trace-1", method = RequestMethod.GET)
     public String trace() {
-        logger.info("===call trace-1===");
+        log.info("===call trace-1===");
         return restTemplate().getForEntity("http://trace-2/trace-2", String.class).getBody();
     }
 

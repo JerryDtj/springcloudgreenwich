@@ -1,0 +1,15 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: sleuth-consumer
+  cloud:
+    consul:
+      #      consul服务端地址
+      host: localhost
+      port: 8500
+      #      下面的配置主要是用于consul的心跳检测。如果不用发布服务，那么可以不配置
+      discovery:
+        health-check-url: http://localhost:10020/actuator/health
+        service-name: sleuth-consumer
+
