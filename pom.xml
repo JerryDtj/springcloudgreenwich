@@ -16,6 +16,9 @@
         <module>consul-stream</module>
         <module>trace-1</module>
         <module>tracee-2</module>
+        <module>sleuth-consumer</module>
+        <module>eureka-server1</module>
+        <module>eureka-client1</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
