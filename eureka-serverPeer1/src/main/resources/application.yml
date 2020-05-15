@@ -1,0 +1,12 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: eurekaPeer1
+
+eureka:
+  instance:
+    hostname: eurekaPeer1
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090

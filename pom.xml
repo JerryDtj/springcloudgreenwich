@@ -19,6 +19,9 @@
         <module>sleuth-consumer</module>
         <module>eureka-server1</module>
         <module>eureka-client1</module>
+        <module>eureka-client2</module>
+        <module>eureka-serverPeer1</module>
+        <module>eureka-serverPeer2</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

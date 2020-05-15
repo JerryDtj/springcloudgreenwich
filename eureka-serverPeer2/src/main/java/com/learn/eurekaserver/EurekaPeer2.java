@@ -1,18 +1,20 @@
-package com.learn.eureka;
+package com.learn.eurekaserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
- * @author Jerry
- * @Date 2020/5/1 7:12 上午
- */
-
+ * despaction
+ *
+ * @Author: jerry
+ * @date: 2020/5/11 14:30
+ * @description:
+ **/
 @EnableEurekaServer
 @SpringBootApplication
-public class EurekaServerStart {
+public class EurekaPeer2 {
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServerStart.class,args);
+        SpringApplication.run(EurekaPeer2.class,args);
     }
 }
